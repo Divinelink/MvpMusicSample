@@ -4,12 +4,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import gr.discogs.mvp.demo.handreolas.mvpsamplemusicapp.R;
+import gr.discogs.mvp.demo.handreolas.mvpsamplemusicapp.features.albums.AlbumFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.homeRoot, AlbumFragment.newInstance())
+                .commit();
     }
 }
