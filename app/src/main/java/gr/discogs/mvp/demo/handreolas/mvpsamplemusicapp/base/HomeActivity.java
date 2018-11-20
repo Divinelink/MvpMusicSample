@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import gr.discogs.mvp.demo.handreolas.mvpsamplemusicapp.R;
 import gr.discogs.mvp.demo.handreolas.mvpsamplemusicapp.features.albums.AlbumFragment;
+import gr.discogs.mvp.demo.handreolas.mvpsamplemusicapp.features.tracks.TracksFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class HomeActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.homeRoot, AlbumFragment.newInstance())
+                .add(R.id.homeRoot, TracksFragment.newInstance())
                 .commit();
     }
 }
